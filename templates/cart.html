@@ -1,0 +1,62 @@
+<div class="content">
+  <h2>Mi cesta</h2>
+  
+  <table ng-show="cart.length > 0">
+    <tr>
+      <th class="col-image">Imagen</th>
+      <th class="col-name">Nombre</th>
+      <th class="col-price">Precio</th>
+      <th class="col-quantity">Cantidad</th>
+      <th class="col-remove"></th>
+    </tr>
+    <tr ng-repeat="item in cart" ng-init="product = getProductInfo(item.prodId)">
+      <td class="col-image"><img src="/img/{{ product.image }}-mini.jpg"></td>
+      <td class="col-image">{{ product.name }}</td>
+      <td class="col-price">{{ product.price | euro }}</td>
+      <td class="col-quantity"><input type="number" ng-model="item.quantity" min="1"></td>
+      <td class="col-remove">
+        <button ng-click="removeFromCart(item.prodId)">
+          Quitar del carrito
+        </button>
+      </td>
+    </tr>
+  </table>
+  <div ng-show="cart.length == 0">
+    La cesta está vacía
+  </div>
+
+  <div ng-show="cart.length > 0">
+    <h3>Totales</h3>
+    <div>
+      <strong>Gastos de envío fijos:</strong> {{ shippingFee | euro }}
+    </div>
+    <div>
+      <strong>Total de la compra:</strong> {{ getCartTotal() | euro }}
+    </div>
+    <div>IVA incluido</div>
+  </div>
+
+  <div class="checkout" ng-show="cart.length > 0">
+    <h3>Proceder con el pedido</h3>
+
+    <form ng-controller="OrderCtrl" ng-submit="confirmOrder()">
+      <table class="without-border" >
+        <tr>
+          <th>Nombre</th>
+          <td><input type="text" ng-model="name"></td>
+        </tr>
+        <tr>
+          <th>Apellidos</th>
+          <td><input type="text" ng-model="surname"></td>
+        </tr>
+        <tr>
+          <th>Dirección</th>
+          <td><input type="text" ng-model="address"></td>
+        </tr>
+      </table>
+
+        <button type="submit" ng-disabled="sending">Confirmar pedido</button>
+    </form>
+  </div>
+
+</div>

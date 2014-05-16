@@ -1,0 +1,32 @@
+<a class="go-back" ng-href="/categorias/{{ categorySlug }}/">
+  Volver a {{ categoryName }}
+</a>
+
+<div class="content">
+  
+  <div class="product-info-container">
+    <div class="image-panel">
+      <img ng-src="/img/{{ product.image }}.jpg" alt="">
+    </div>
+
+    <div class="product-info">
+      <h2>{{ product.name }}</h2>
+      
+      <div class="price">
+        Precio: {{ product.price | euro }}
+      </div>
+
+      <button ng-click="addToCart()">Añadir a la cesta</button>
+    </div>
+
+  </div>
+  
+  
+  <h3>Especificaciones</h3>
+  <table class="specs">
+    <tr ng-repeat="(specName, specValue) in product.specs">
+      <th class="specsKey">{{ specName }}</th>
+      <td class="specsValue">{{ specValue }}</td>
+    </tr>
+  </table>
+</div>

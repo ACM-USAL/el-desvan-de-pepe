@@ -1,0 +1,103 @@
+{
+  "categories": [
+    {
+      "name": "Monitores",
+      "products": [
+        {
+          "id": 1,
+          "name": "ASUS LED VS197DE",
+          "price": 74.10,
+          "image": "monitor-asus",
+          "specs": {
+            "Interfaz": "VGA",
+            "Resolución": "1366x768",
+            "Tamaño panel": "18.5\""
+          }
+        },
+        {
+          "id": 2,
+          "name": "LG 20EN3",
+          "price": 86.50,
+          "image": "monitor-lg",
+          "specs": {
+            "Interfaz": "VGA",
+            "Resolución": "1600x900",
+            "Tamaño panel": "19.5\""
+          }
+        },
+        {
+          "id": 3,
+          "name": "ACER H236HLBMID",
+          "price": 160.00,
+          "image": "monitor-acer",
+          "specs": {
+            "Interfaz": "VGA, DVI y HDMI",
+            "Resolución": "1920x1080",
+            "Tamaño panel": "23\""
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ratones",
+      "products": [
+        {
+          "id": 4,
+          "name": "Logitech B100",
+          "price": 9.10,
+          "image": "raton-logitech",
+          "specs": {
+            "Interfaz": "USB",
+            "Botones": "3 botones y rueda",
+            "Color": "Negro",
+            "Resolución": "800 dpi"
+          }
+        },
+        {
+          "id": 5,
+          "name": "Genius NX-6500",
+          "price": 11.90,
+          "image": "raton-genius",
+          "specs": {
+            "Interfaz": "USB, Inalámbrico",
+            "Botones": "3 botones y rueda",
+            "Color": "Plateado",
+            "Resolución": "1200 dpi",
+            "Peso": "57 gr"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Discos duros",
+      "products": [
+        {
+          "id": 6,
+          "name": "Seagate ST1000DM003",
+          "price": 51.70,
+          "image": "disco-seagate",
+          "specs": {
+            "Interfaz": "SATA III",
+            "Caché": "64 MiB",
+            "Velocidad": "7200 rpm",
+            "Capacidad": "1 TiB",
+            "Tamaño": "3,5\""
+          }
+        },
+        {
+          "id": 7,
+          "name": "WD RED 2TB",
+          "price": 90.00,
+          "image": "disco-wd",
+          "specs": {
+            "Interfaz": "SATA III",
+            "Caché": "64 MiB",
+            "Velocidad": "7200 rpm",
+            "Capacidad": "2 TiB",
+            "Tamaño": "3,5\""
+          }
+        }
+      ]
+    }
+  ]
+}

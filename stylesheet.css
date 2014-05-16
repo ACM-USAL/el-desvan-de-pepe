@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Roboto Thin';
+    src: url('fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('fonts/Roboto-Thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 960px;
+    margin: 0 auto;
+    min-height: 100%;
+    color: #463434;
+    position: relative;
+}
+body, input[type="search"], input[type="text"], input[type="number"], button {
+    font-family: "Roboto Thin";
+    font-size: 20px;
+    font-weight: 300;
+}
+html {
+    background: #F3F3F3;
+    padding-bottom: 40px;
+}
+a {
+    color: #302828;
+    text-decoration: none;
+}
+
+.content {
+    background: #F0E6B6;
+    padding: 30px;
+}
+
+table th {
+    text-align: left;
+}
+
+table td, table th {
+    border: 1px solid #A5A08E;
+    padding: 10px 5px;
+}
+
+table.without-border td, table.without-border th {
+    border: none;
+}
+
+.product-boxes > li {
+    height: 90px;
+    list-style-type: none;
+}
+.product-boxes > li > a {
+    padding: 10px;
+    background-position-x: calc(100% - 15px);
+}
+
+.product-boxes {
+    padding-left: 0;
+}
+
+header a {
+    text-decoration: none;
+    border-bottom: none;
+}
+ul.categories {
+    padding-left: 0;
+}
+ul.categories > li {
+    list-style: none;
+}
+.fancy-box {
+    margin-bottom: 10px;
+}
+.fancy-box > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    background: url(img/arrow-brown.png) no-repeat calc(100% - 10px), #FFFDFA;
+    box-sizing: border-box;
+    border: 1px solid #DBDBDB;
+    color: #302828;
+}
+.fancy-box > a:hover {
+    background-color: #714EBB;
+    color: white;
+    background-image: url(img/arrow-white.png);
+}
+
+h2 strong {
+    font-weight: inherit;
+    color: #353570;
+}
+
+.product-boxes img {
+    height: 100%;
+    max-width: 70px;
+    float: left;
+    margin-right: 11px;
+}
+
+.product-name {
+    margin-top: 9px;
+}
+.product-price {
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+* > h2:first-child {
+    margin-top: 10px;
+}
+input[type="search"] {
+    font-size: 18px;
+}
+
+.category-controls > div {
+    display: inline-block;
+}
+
+.category-controls > .right {
+    text-align: right;
+    padding-left: 10px;
+}
+
+.go-back {
+    margin-bottom: 14px;
+    color: white;
+    padding: 20px 30px;
+    background: url(img/arrow-back.png) no-repeat 31px, #8970BD;
+    padding-left: 80px;
+    display: block;
+}
+
+.go-back:hover {
+    background-color: #7661A2;
+}
+
+image-panel {}
+
+.image-panel > img {
+    width: 100%;
+}
+.image-panel {
+    width: 220px;
+    margin-right: 14px;
+}
+
+.product-info-container > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td.specsValue {
+    width: auto;
+}
+
+th.specsKey {
+    width: 170px;
+}
+.specs {
+    width: 100%;
+}
+
+button, .button {
+    border: none;
+    background: #C78B5C;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.product-info .price {
+    margin-bottom: 20px;
+}
+button:hover, .button:hover {
+    background: #FF820F;
+}
+
+.checkout {
+    margin-top: 25px;
+}
+
+.cart-button {
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+input[type="number"] {
+    width: 80px;
+}
+
+.col-name {
+    width: 100%;
+}
+
+.col-image, .col-price, .col-quantity, .col-remove {
+    width: 0;
+    white-space: nowrap;
+}

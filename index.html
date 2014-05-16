@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="Shop">
+<head>
+  <meta charset="UTF-8">
+  <title>El Baúl de Pepe</title>
+  <link rel="stylesheet" href="/stylesheet.css">
+  <script src="/js/utils.js"></script>
+  <script src="/js/lodash.js"></script>
+  <script src="/js/angular.js"></script>
+  <script src="/js/angular-route.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/cart.js"></script>
+  <script src="/js/catalog.js"></script>
+  <script src="/js/filters.js"></script>
+  <script src="/js/order.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+</head>
+<body ng-controller="MainController">
+  <header>
+    <h1><a href="/">El Baúl de Pepe</a></h1>
+    <a href="/cesta/" class="button cart-button">
+      Mi cesta:
+      <ng-pluralize count="cart.length"
+                    when="{'0': 'vacía',
+                           '1': 'un elemento',
+                           'other': '{} elementos'}">
+      </ng-pluralize>
+    </a>
+  </header>
+
+  <div ng-view>
+  </div>
+</body>
+</html>

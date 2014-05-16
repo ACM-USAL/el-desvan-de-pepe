@@ -1,0 +1,45 @@
+<a class="go-back" href="/">
+  Volver a la lista de categorías
+</a>
+
+<div class="content">
+  <h2>Esto es lo que tenemos en <strong>{{ category.name }}</strong></h2>
+  
+  <div>
+  </div>
+  
+  <div class="category-controls">
+    <div class="left">
+      Filtro: <input type="search" ng-model="searchString" placeholder="Buscar en {{ category.name }}...">
+    </div>
+  
+    <div class="right">
+      Ordenar por:
+      <label>
+        <input type="radio" ng-model="orderProductsBy" value="price">
+        Precio (ascendente)
+      </label>
+      <label>
+        <input type="radio" ng-model="orderProductsBy" value="-price">
+        Precio (descendente)
+      </label>
+    </div>
+  </div>
+  
+  <ul class="product-boxes">
+    <li ng-repeat="prod in filteredProducts =
+                   ( category.products 
+                   | filter:{name: searchString} 
+                   | orderBy:orderProductsBy)"
+        class="fancy-box">
+      <a ng-href="{{ prod.name | slugify }}/">
+        <img src="/img/{{ prod.image }}-mini.jpg" alt="">
+        <div class="product-name">{{ prod.name }}</div>
+        <div class="product-price">{{ prod.price | euro }}</div>
+      </a>
+    </li>
+  </ul>
+  <div ng-show="filteredProducts.length == 0">
+  No se han encontrado productos.
+  </div>
+</div>

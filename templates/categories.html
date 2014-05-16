@@ -1,0 +1,8 @@
+<div class="content">
+  <h2>Hola, soy Pepe. ¿Qué necesitas?</h2>
+  <ul class="categories">
+    <li ng-repeat="cat in categories" class="fancy-box">
+      <a ng-href="/categorias/{{ cat.name | slugify }}">{{ cat.name }}</a>
+    </li>
+  </ul>
+</div>
